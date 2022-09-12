@@ -1,0 +1,45 @@
+Create
+
+Cria countainer = docker create 
+cria countainer sem executar imagem = docker container create image_Name
+cria e roda um container baseado na imagem = docker run image_Name
+cria e roda um container em terminal interativo = docker run -it image_Name
+
+
+execute 
+
+inicia a execução do container ja criado = docker start id
+interrompe a execução do container ja criado = docker stop id
+pausa a execução do container ja criado = docker pause id
+reinicia a execução do container ja criado = docker restart id
+
+remoção
+
+remove todos os container = docker ps -aq || docker rm $
+remove 1 container = docker rm id || docker rm -f Id (o -f é feito para forçar a ação)
+
+
+contrução
+
+constroi baseado em imagem = docker build -f Dockerfile || docker build
+constroi uma imagem com nome especifico = docker build -t image_Name
+
+nomeação
+
+renomeação = docker rename oldName newName
+atribuição de nome = --name (usado no inicio da criação)
+
+visualização
+
+mostra as informações sobre um container = docker inspect id
+mostra todos os containers em execução = docker ps || docker container ls
+mostra o ultimo container = docker ps -l
+mostra todos os containers existentes = docker ps -a || docker container ls -aq
+mostra o histórico de imagem = docker history image_Name
+mostra as imagems existentes localmente = docker images
+retorna os logs de um countainer = docker logs id
+
+terminal
+
+acesso ao terminal no container com uso do teclado = docker container run -it ubuntu bash
+
